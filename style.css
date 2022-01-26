@@ -4,3 +4,69 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+/* Slider */
+.slider {
+    margin: auto;
+    width: 80%;
+    height: 70%;
+    display: flex;
+}
+
+/* Immagine principale */
+.slider .container-main-image {
+    width: 80%;
+    height: 100%;
+}
+
+.slider .container-main-image .main-image {
+    width: 100%;
+    height: 100%;
+}
+
+.slider .container-main-image .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Fine immagine principale */
+
+/* Lista immagini */
+.slider .container-list-images {
+    position: relative;
+    width: calc(100% - 80%);
+    height: 100%;
+}
+
+.slider .container-list-images .image {
+    width: 100%;
+    height: calc(100% / 5);
+}
+
+.slider .container-list-images .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Fine lista immagini */
+
+/* Frecce */
+
+.down .fas {
+    bottom: 0%;
+}
+
+.fas {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin: 4% 0;
+    font-size: 140%;
+    color: gray;
+}
+/* Fine frecce */
