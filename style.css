@@ -9,6 +9,12 @@
     height: 100vh;
     display: flex;
 }
+/* Common */
+.active {
+    display: block;
+}
+/* Fine common */
+
 /* Slider */
 .slider {
     margin: auto;
@@ -21,6 +27,7 @@
 .slider .container-main-image {
     width: 80%;
     height: 100%;
+    background-color: rgb(13, 13, 20);
 }
 
 .slider .container-main-image .main-image {
@@ -37,7 +44,7 @@
     object-fit: cover;
 }
 
-.slider .container-main-image .main-image div {
+.slider .container-main-image .main-image .text {
     width: 100%;
     float: left;
     color: white;
@@ -46,12 +53,12 @@
     bottom: 10%;
 }
 
-.slider .container-main-image .main-image h2 {
+.slider .container-main-image .main-image #country {
     text-align: right;
     margin: 0 2%;
 }
 
-.slider .container-main-image .main-image h4 {
+.slider .container-main-image .main-image #description {
     text-align: right;
     margin: 0 2%;
 }
