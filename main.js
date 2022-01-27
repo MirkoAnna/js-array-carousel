@@ -22,28 +22,40 @@ const description = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
 
-let mainImage = '';
 let listImages = '';
+let mainImage = '';
 
-for (let i = 0; i < images.length; i++ ) {
+for (let i = 0; i < images.length; i++) {
     listImages += `<div class="image">
                     <img src="${images[i]}" alt="">
                 </div>`
                 
-    mainImage = `<div class="main-image">
+    mainImage += `<div class="main-image">
                     <img src="${images[i]}" alt="">
                     <div class="text">
                         <h2 id="country">${nameCountries[i]}</h2>
                         <h4 id="description">${description[i]}</h4>
                     </div>
-                <div>`
+                </div>`
 }
 
-let listImagesInjector  = document.querySelector('.container-list-images');
-listImagesInjector.innerHTML = listImages;
+// Inietto lista immagini
+let listImagesInjector = document.querySelector('.container-list-images');
+listImagesInjector.innerHTML += listImages;
 
+// Inietto l'immagine principale
 let mainImageInjector = document.querySelector('.container-main-image');
-mainImageInjector.innerHTML = mainImage;
+mainImageInjector.innerHTML += mainImage;
 
-// Tengo traccia dell'immagine selezionata
-let imageSelected = 0;
+// Contatore
+let imageSelected = 1;
+
+// Applicco active all'immagine selezionata
+
+// Lista immagini
+let listImagesActive = document.getElementsByClassName('image');
+listImagesActive[imageSelected].classList.add('active');
+
+// Immagine principale
+let mainImageActive = document.getElementsByClassName('main-image');
+mainImageActive[imageSelected].classList.add('active');

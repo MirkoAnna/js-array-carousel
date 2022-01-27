@@ -10,9 +10,8 @@
     display: flex;
 }
 /* Common */
-.active {
-    display: block;
-}
+
+
 /* Fine common */
 
 /* Slider */
@@ -27,7 +26,6 @@
 .slider .container-main-image {
     width: 80%;
     height: 100%;
-    background-color: rgb(13, 13, 20);
 }
 
 .slider .container-main-image .main-image {
@@ -35,6 +33,11 @@
     height: 100%;
     float: left;
     position: relative;
+    display: none;
+}
+
+.slider .container-main-image .main-image.active {
+    display: block;
 }
 
 .slider .container-main-image .main-image img {
@@ -80,6 +83,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(50%);
+}
+
+.slider .container-list-images .image.active img {
+    border: 2px solid lightgray;
+    filter: none;
+    
 }
 /* Fine lista immagini */
 
@@ -95,6 +105,6 @@
     z-index: 1;
     margin: 4% 0;
     font-size: 140%;
-    color: gray;
+    color: lightslategray
 }
 /* Fine frecce */
