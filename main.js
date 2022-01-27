@@ -28,7 +28,7 @@ let listImages = '';
 for (let i = 0; i < images.length; i++ ) {
     listImages += `<div class="image">
                     <img src="${images[i]}" alt="">
-                </div>`;
+                </div>`
                 
     mainImage = `<div class="main-image">
                     <img src="${images[i]}" alt="">
@@ -36,7 +36,7 @@ for (let i = 0; i < images.length; i++ ) {
                         <h2 id="country">${nameCountries[i]}</h2>
                         <h4 id="description">${description[i]}</h4>
                     </div>
-                <div>`;
+                <div>`
 }
 
 let listImagesInjector  = document.querySelector('.container-list-images');
@@ -44,3 +44,6 @@ listImagesInjector.innerHTML = listImages;
 
 let mainImageInjector = document.querySelector('.container-main-image');
 mainImageInjector.innerHTML = mainImage;
+
+// Tengo traccia dell'immagine selezionata
+let imageSelected = 0;
